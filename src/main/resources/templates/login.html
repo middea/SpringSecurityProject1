@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bank of Excellence</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Add custom CSS for styling -->
+    <style>
+        /* Add your custom CSS here */
+        body {
+            background-image: url("https://gdb.rferl.org/c4170000-0aff-0242-0492-08d9f6edaad7_cx0_cy7_cw0_w1080_h608_s.jpg");
+            background-size: cover; /* Adjust as needed */
+            background-repeat: no-repeat; /* Adjust as needed */
+            background-attachment: scroll; /* Adjust as needed */
+        }
+        .login-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="login-container">
+                <h2 class="text-center">Login to Your Account</h2>
+                <form th:action="@{'/sign-in'}" method="post">
+                    <div class="form-group">
+                        <label class="form-label">Username</label>
+                        <input type="email" class="form-control" name="user-email" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" name="user-password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" style="margin-top: 10px">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

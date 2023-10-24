@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank of Excellence</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Add custom CSS for styling -->
+    <style>
+        /* Add your custom CSS here */
+        body {
+            background-image: url(https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJvYXV0aCI6eyJjbGllbnRfaWQiOiJhZW0ifSwicGF0aCI6ImNyZWRpdHN1aXNzZVwvYWNjb3VudHNcLzkxXC80MDAwODYyXC9wcm9qZWN0c1wvNDExXC9hc3NldHNcLzllXC8xMDMzMTRcLzc2YTZmY2M5NzI2NDU4N2Q1NzgyZThhNzcwNWUwZTg3LTE2NTE4NDAzMzcuanBnIn0:creditsuisse:8g4CnHM0RBe4Rgz2NGCemL667wO-w4fstcbgqldwZ8g?width=1600&quality=90);
+            background-size: cover; /* Adjust as needed */
+            background-repeat: no-repeat; /* Adjust as needed */
+            background-attachment: scroll; /* Adjust as needed */
+        }
+        .navbar-custom {
+            background-color: #1a1a1a;
+        }
+        .navbar-custom .navbar-brand, .navbar-custom .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+        .jumbotron {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="#">Bank of Excellence</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/bank/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/bank/profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="jumbotron text-center">
+    <h1>Welcome to Bank of Excellence</h1>
+    <p>Your Trusted Financial Partner</p>
+    <a class="btn btn-info btn-lg" href="/bank/register" role="button" style="margin-bottom: 20px" sec:authorize="isAnonymous()">Open an Account</a>
+</div>
+
+<!-- Main Content Section -->
+<div class="container" style="margin-top: 30px">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Accounts</h2>
+            <p>Explore our wide range of account options to suit your financial needs.</p>
+            <a class="btn btn-secondary" href="#" role="button">Learn More</a>
+        </div>
+        <div class="col-md-4">
+            <h2>Loans</h2>
+            <p>Get the funding you need with our competitive loan options.</p>
+            <a class="btn btn-secondary" href="#" role="button">Learn More</a>
+        </div>
+        <div class="col-md-4">
+            <h2>About Us</h2>
+            <p>Learn about our mission, values, and commitment to excellence.</p>
+            <a class="btn btn-secondary" href="#" role="button">Learn More</a>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
